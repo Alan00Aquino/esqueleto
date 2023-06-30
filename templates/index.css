@@ -1,0 +1,82 @@
+body {
+  background: -webkit-gradient(linear, left top, left bottom, from(coral), to(rebeccapurple));
+  background: linear-gradient(coral, rebeccapurple);
+  border: none;
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+h1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 20px;
+  color: white;
+  box-shadow: 30px 30px 30px -20px rgba(0, 0, 0, 0.6);
+  border-radius: 500px;
+}
+h3 {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  margin: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 20px;
+  color: white;
+  box-shadow: 30px 30px 30px -20px rgba(0, 0, 0, 0.6);
+  border-radius: 500px;
+}
+.grid {
+  -webkit-box-flex: 0;
+          flex: 0 0 auto;
+  -webkit-perspective: 600px;
+          perspective: 600px;
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  grid-template-rows: repeat(3, 150px);
+  grid-gap: 20px;
+  max-width: 480px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.grid div {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 20px;
+  color: transparent;
+  box-shadow: 30px 30px 30px -20px rgba(0, 0, 0, 0.6);
+  border-radius: 2px;
+}
+.grid div:nth-child(odd) {
+  -webkit-animation: 1000ms ease-in-out infinite alternate pulse;
+          animation: 1000ms ease-in-out infinite alternate pulse;
+}
+.grid div:nth-child(even) {
+  -webkit-animation: 1000ms 1000ms ease-in-out infinite alternate pulse;
+          animation: 1000ms 1000ms ease-in-out infinite alternate pulse;
+}
+
+@-webkit-keyframes pulse {
+  to {
+    -webkit-transform: translate3d(0px, 0px, -60px);
+            transform: translate3d(0px, 0px, -60px);
+    box-shadow: 15px 15px 20px -20px rgba(0, 0, 0, 0.8);
+  }
+}
+
+@keyframes pulse {
+  to {
+    -webkit-transform: translate3d(0px, 0px, -60px);
+            transform: translate3d(0px, 0px, -60px);
+    box-shadow: 15px 15px 20px -20px rgba(0, 0, 0, 0.8);
+  }
+}
